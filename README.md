@@ -1,10 +1,8 @@
 # Presence Setter
 
-## What is it?
-
 Presence setter is a quick and dirty lambda function that will change your presence in Slack on a schedule. Its the same as remembering to manually set your status to `away`.
 
-## Prequisites
+## Prerequisites
 
 You'll need;
 
