@@ -1,0 +1,16 @@
+service: presence-setter
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  function:
+    handler: handler.run
+    events:
+      # Invoke Lambda function at 6pm every weekday
+      - schedule: cron(0 18 ? * MON-FRI *)
+      # Invoke Lambda function at 9am every weekday
+      - schedule: cron(0 9 ? * MON-FRI *)
