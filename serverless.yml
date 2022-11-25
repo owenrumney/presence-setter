@@ -14,3 +14,5 @@ functions:
       - schedule: cron(0 18 ? * MON-FRI *)
       # Invoke Lambda function at 9am every weekday
       - schedule: cron(0 9 ? * MON-FRI *)
+    environment:
+      SLACK_API_KEY: ${env:SLACK_API_KEY}

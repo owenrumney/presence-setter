@@ -30,8 +30,14 @@ Create a Slack App then you need to give the User Token the required scope - thi
 
 and setting the `User Tokens Scope` to;
 
+```
+- dnd:read
+- dnd:write
 - users:write
 - users:read
+```
+
+The `dnd:*` permissions allow the Do Not Disturb setting and ending and the `users:*` permissions allow for reading and updating your status
 
 Install the app in your workspace and it's ready to go
 
@@ -52,12 +58,14 @@ Create some credentials to deploy with, you're going to need them when running S
 Now you can run 
 
 ```bash
+export SLACK_API_KEY=<provide your Slack token here>
+
 serverless deploy
 ```
 
 Which will create the Lambda function and the Event bridge...
 
-All that is left to do when it is completed is go into Lambda and add the `SLACK_API_KEY` environment variable - I have a TODO to add this as SSM Parameter.
+
 
 
 ## Testing it out
